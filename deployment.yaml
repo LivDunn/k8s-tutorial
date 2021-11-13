@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-app-deployment
+  labels:
+    group: k8s-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8s-app
+  template:
+    metadata: 
+      labels:
+        app: k8s-app
+    spec: 
+      containers:
+        - name: node-app
+          image: oliviajdunnett/k8s-tutorial:version1
+          imagePullPolicy: Always
+          livenessProbe: 
+            httpGet:
+              path: /
+              port: 8080
+            periodSeconds: 10
+            initialDelaySeconds: 5
+        # - name: ...
+        #   image: ...
