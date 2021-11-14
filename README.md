@@ -1,12 +1,11 @@
 # k8s-tutorial
 Small node app to use for k8s tutorial 
 
-
 build container 
 
 docker build -t k8s-tutorial .
-docker tag k8s-tutorial {YOUR_HUB_NAME}/k8s-tutorial:version1
-docker push {YOUR_HUB_NAME}/k8s-tutorial:version1
+docker tag k8s-tutorial {YOUR_HUB_NAME}/k8s-tutorial:latest
+docker push {YOUR_HUB_NAME}/k8s-tutorial:latest
 
 -- Might have issue pushing from the cmd line - if so login via your docker desktop app and push from there 
 
@@ -28,7 +27,7 @@ run this `kubectl get po -A` and wait until all services show 1/1
 
 # imperitive commands 
 
-`kubectl create deployment k8s-demo --image=oliviajdunnett/k8s-tutorial:version1`
+`kubectl create deployment k8s-demo --image=oliviajdunnett/k8s-tutorial:latest`
 
 `kubectl get deployments`
 
