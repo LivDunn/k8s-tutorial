@@ -27,7 +27,7 @@ run this `kubectl get po -A` and wait until all services show 1/1
 
 `minikube dashboard` -- this might hang on checking proxy give it time it finally kicks in
 
-# imperitive commands 
+# imperative commands 
 
 `kubectl create deployment k8s-demo --image=oliviajdunnett/k8s-tutorial:latest`
 
@@ -47,7 +47,7 @@ clean up
 
 
 
-# Declaritively
+# Declaratively
 
 `kubectl apply -f=deployment.yaml `
 
