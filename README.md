@@ -1,17 +1,17 @@
 # k8s-tutorial
 Small node app to use for k8s tutorial 
 
-# build container 
+# Tools & set up required
 
-`docker build -t k8s-tutorial .`
+## download kubectl
 
-`docker tag k8s-tutorial {YOUR_HUB_NAME}/k8s-tutorial:latest`
+`brew install kubectl`
 
-`docker push {YOUR_HUB_NAME}/k8s-tutorial:latest`
+## download docker
 
--- Might have issue pushing from the cmd line - if so login via your docker desktop app and push from there 
+Docker - https://docs.docker.com/desktop/mac/install/
 
-# download minikube
+## download minikube
 
 use binary as brew gives an old version with a bug in the proxy 
 
@@ -26,6 +26,18 @@ sudo install minikube-darwin-amd64 /usr/local/bin/minikube
 run this `kubectl get po -A` and wait until all services show 1/1
 
 `minikube dashboard` -- this might hang on checking proxy give it time it finally kicks in
+
+
+# build container 
+
+`docker build -t k8s-tutorial .`
+
+`docker tag k8s-tutorial {YOUR_HUB_NAME}/k8s-tutorial:latest`
+
+`docker push {YOUR_HUB_NAME}/k8s-tutorial:latest`
+
+-- Might have issue pushing from the cmd line - if so login via your docker desktop app and push from there 
+
 
 # imperative commands 
 
@@ -44,7 +56,6 @@ run this `kubectl get po -A` and wait until all services show 1/1
 clean up
 `kubectl delete deployments k8s-demo` 
 `kubectl delete services k8s-demo`
-
 
 
 # Declaratively
