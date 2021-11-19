@@ -11,7 +11,7 @@ Small node app to use for k8s tutorial
 
 -- Might have issue pushing from the cmd line - if so login via your docker desktop app and push from there 
 
-# download minikubeclean
+# download minikube
 
 use binary as brew gives an old version with a bug in the proxy 
 
