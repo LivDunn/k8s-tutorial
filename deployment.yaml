@@ -15,12 +15,12 @@ spec: #this spec decribes your desired end state.
       containers:
         - name: node-app
           image: oliviajdunnett/k8s-tutorial:latest
-          imagePullPolicy: Always # anytime you do a deployment this will always pull the lates image from the registry
+          imagePullPolicy: IfNotPresent # anytime you do a deployment this will only pull the latest image if its not their locally
           livenessProbe: # custom healthcheck - ping the app every 10 seconds, first call delayed by 5
             httpGet:
               path: /
               port: 8080
-            periodSeconds: 10
-            initialDelaySeconds: 5
+            periodSeconds: 20
+            initialDelaySeconds: 10
         # - name: ...
         #   image: ...  you can add more than 1 container in the deployment
