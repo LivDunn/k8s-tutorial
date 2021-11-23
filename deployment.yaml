@@ -20,7 +20,10 @@ spec: #this spec decribes your desired end state.
             httpGet:
               path: /
               port: 8080
-            periodSeconds: 20
-            initialDelaySeconds: 10
+            periodSeconds: 40
+          readinessProbe: # custom healthcheck - check if container is ready & healthy to receive traffic
+            httpGet:
+              path: /
+              port: 8080
         # - name: ...
         #   image: ...  you can add more than 1 container in the deployment
