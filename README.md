@@ -15,8 +15,9 @@ Docker - https://docs.docker.com/desktop/mac/install/
 
 use binary as brew gives an old version with a bug in the proxy 
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
-sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+`curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64`
+
+`sudo install minikube-darwin-amd64 /usr/local/bin/minikube`
 
 
 `minikube start`
